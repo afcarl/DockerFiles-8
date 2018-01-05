@@ -1,0 +1,20 @@
+[global]
+device = gpu
+floatX = float32
+openmp = True
+allow_gc = True
+
+[nvcc]
+fastmath = True
+flags=-D_FORCE_INLINES
+
+[lib]
+cnmem = 0.01
+
+[dnn.conv]
+algo_fwd = time_once
+algo_bwd_data = deterministic
+algo_bwd_filter = deterministic
+
+[cuda]
+root = /usr/lib/nvidia-cuda-toolkit
