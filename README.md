@@ -6,6 +6,18 @@
 Instructions here: https://docs.docker.com/engine/installation/linux/docker-ce/ubuntu/
 You may need to reboot your system after installation
 
+Make docker start on boot:
+
+	sudo systemctl enable docker
+
+Use docker without sudo:
+
+	sudo groupadd docker
+	sudo usermod -aG docker $USER
+
+(need to log out and back in)
+
+
 ## Install nvidia-docker
 
 Instructions here: https://github.com/NVIDIA/nvidia-docker
